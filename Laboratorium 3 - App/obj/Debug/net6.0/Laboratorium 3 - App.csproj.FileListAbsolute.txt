@@ -1,0 +1,61 @@
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\appsettings.Development.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\appsettings.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.staticwebassets.runtime.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.exe
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.deps.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.runtimeconfig.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.dll
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.pdb
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.csproj.AssemblyReference.cache
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.AssemblyInfoInputs.cache
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.AssemblyInfo.cs
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.csproj.CoreCompileInputs.cache
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.RazorAssemblyInfo.cache
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.RazorAssemblyInfo.cs
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.Laboratorium 3 - App.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.build.Laboratorium 3 - App.props
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Laboratorium 3 - App.props
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Laboratorium 3 - App.props
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets.build.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets.development.json
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\scopedcss\bundle\Laboratorium 3 - App.styles.css
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\scopedcss\projectbundle\Laboratorium 3 - App.bundle.scp.css
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.dll
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\refint\Laboratorium 3 - App.dll
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.pdb
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.genruntimeconfig.cache
+D:\Users\kamil.baca\source\repos\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\ref\Laboratorium 3 - App.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\appsettings.Development.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\appsettings.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.staticwebassets.runtime.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.exe
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.deps.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.runtimeconfig.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\Laboratorium 3 - App.pdb
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.AssemblyInfoInputs.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.AssemblyInfo.cs
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.MvcApplicationPartsAssemblyInfo.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.RazorAssemblyInfo.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.RazorAssemblyInfo.cs
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.Laboratorium 3 - App.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.build.Laboratorium 3 - App.props
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Laboratorium 3 - App.props
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Laboratorium 3 - App.props
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets.build.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\staticwebassets.development.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\scopedcss\bundle\Laboratorium 3 - App.styles.css
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\scopedcss\projectbundle\Laboratorium 3 - App.bundle.scp.css
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\refint\Laboratorium 3 - App.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.pdb
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.genruntimeconfig.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\ref\Laboratorium 3 - App.dll
