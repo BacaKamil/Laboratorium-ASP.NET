@@ -1,0 +1,47 @@
+﻿@model Dictionary<int, Reservation>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Szczegóły</h1>
+<div>
+    <table class="table">
+        <tr>
+
+            <th>
+                Adres
+            </th>
+            <th>
+                Pokój
+            </th>
+            <th>
+                Właściciel
+            </th>
+            <th>
+                Cena
+            </th>
+        </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+                    @item.Value.Adres
+                </td>
+                <td>
+                    @item.Value.Pokoj
+                </td>
+                <td>
+                    @item.Value.Wlasciciel
+                </td>
+                <td>
+                    @item.Value.Cena
+                </td>
+
+            </tr>
+    </table>
+</div>

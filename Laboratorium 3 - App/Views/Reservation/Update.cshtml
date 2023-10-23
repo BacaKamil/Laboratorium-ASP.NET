@@ -4,8 +4,8 @@
 *@
 @{
 }
-<h1>Rezerwacja</h1>
-<form asp-controller="Reservation" asp-action="Create" method="post">
+<h1>Edycja rezerwacji</h1>
+<form asp-action="Update" method="post">
     <div class="mb-3">
         <label asp-for="Data">Data</label>
         <input class="form-control" asp-for="Data" />
@@ -22,7 +22,7 @@
         <span asp-validation-for="Adres" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Pokoj">Pokój</label>
+        <label asp-for="Pokoj">Pokoj</label>
         <input class="form-control" asp-for="Pokoj" />
         <span asp-validation-for="Pokoj" class="text-danger"></span>
     </div>
@@ -37,6 +37,6 @@
         <span asp-validation-for="Cena" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary" type="submit">Rezerwuj</button>
+        <button class="btn btn-primary" type="submit">Zapisz</button>
     </div>
 </form>
