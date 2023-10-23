@@ -31,8 +31,13 @@ namespace Laboratorium_3___App.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            return View("Details", _reservations[id]);
+            if (_reservations.TryGetValue(id, out var reservation))
+            {
+                return View(reservation);
+            }
+            return RedirectToAction("Index");
         }
+
 
         [HttpGet]
         public IActionResult Delete(int id)

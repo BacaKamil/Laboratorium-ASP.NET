@@ -1,0 +1,9 @@
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.GeneratedMSBuildEditorConfig.editorconfig
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.AssemblyInfoInputs.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.AssemblyInfo.cs
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.MvcApplicationPartsAssemblyInfo.cs
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.MvcApplicationPartsAssemblyInfo.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.RazorAssemblyInfo.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net7.0\Laboratorium 3 - App.RazorAssemblyInfo.cs

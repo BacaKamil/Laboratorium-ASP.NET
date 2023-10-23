@@ -8,7 +8,7 @@ namespace Laboratorium_3___App.Models
         [HiddenInput]
         public int Id { get; set; }
         [DataType(DataType.Date)]
-        public DateOnly Data { get; set; }
+        public DateTime Data { get; set; }
         public string Miasto { get; set; }
         public string Adres { get; set; }
         public string Pokoj { get; set; }

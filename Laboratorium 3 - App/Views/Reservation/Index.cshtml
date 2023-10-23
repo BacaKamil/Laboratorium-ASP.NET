@@ -31,12 +31,15 @@
                     @item.Value.Wlasciciel
                 </td>
                 <td>
-                    <a class="btn btn-outline-primary" asp-controller="Reservation" asp-action="Update" asp-route-id="@item.Value.Id">Edycja</a>
                     <a class="btn btn-outline-info" asp-controller="Reservation" asp-action="Details" asp-route-id="@item.Value.Id">Szczgóły</a>
+                    <a class="btn btn-outline-primary" asp-controller="Reservation" asp-action="Update" asp-route-id="@item.Value.Id">Edycja</a>
                     <a class="btn btn-outline-danger" asp-controller="Reservation" asp-action="Delete" asp-route-id="@item.Value.Id">Usuń</a>
                 </td>
 
             </tr>
         }
     </table>
+    <div class="mb-3">
+        <a class="btn btn-primary" asp-controller="Reservation" asp-action="Create">Dodaj rezerwację</a>
+    </div>
 </div>

@@ -1,4 +1,4 @@
-﻿@model Dictionary<int, Reservation>
+﻿@model Reservation
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -8,7 +8,12 @@
 <div>
     <table class="table">
         <tr>
-
+            <th>
+                Data
+            </th>
+            <th>
+                Miasto
+            </th>
             <th>
                 Adres
             </th>
@@ -23,25 +28,13 @@
             </th>
         </tr>
             <tr>
-                <td>
-                    
-                </td>
-                <td>
-                    
-                </td>
-                <td>
-                    @item.Value.Adres
-                </td>
-                <td>
-                    @item.Value.Pokoj
-                </td>
-                <td>
-                    @item.Value.Wlasciciel
-                </td>
-                <td>
-                    @item.Value.Cena
-                </td>
-
+                <td>@Model.Data</td>
+                <td>@Model.Miasto</td>
+                <td>@Model.Adres</td>
+                <td>@Model.Pokoj</td>
+                <td>@Model.Wlasciciel</td>
+                <td>@Model.Cena</td>
             </tr>
     </table>
+    <a class="btn btn-primary" asp-controler="Reservation" asp-action="Index">Powrót</a>
 </div>
