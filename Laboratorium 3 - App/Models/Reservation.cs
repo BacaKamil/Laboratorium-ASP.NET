@@ -7,12 +7,24 @@ namespace Laboratorium_3___App.Models
     {
         [HiddenInput]
         public int Id { get; set; }
+
         [DataType(DataType.Date)]
-        public DateTime Data { get; set; }
+        [Required(ErrorMessage = "Musisz podać datę!")]
+        public DateTime? Data { get; set; }
+
+        [Required(ErrorMessage = "Musisz wpisać miasto!")]
         public string Miasto { get; set; }
+
+        [Required(ErrorMessage = "Musisz wpisać adres!")]
         public string Adres { get; set; }
+
+        [Required(ErrorMessage = "Musisz wpisać pokój!")]
         public string Pokoj { get; set; }
+
+        [Required(ErrorMessage = "Musisz wpisać właściciela!")]
         public string Wlasciciel { get; set; }
-        public decimal Cena { get; set; }
+
+        [Required(ErrorMessage = "Musisz wpisać cenę!")]
+        public decimal? Cena { get; set; }
     }
 }
