@@ -6,16 +6,14 @@ namespace Laboratorium_3___App.Controllers
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
+        private readonly IDateTimeProvider _dateTimeProvider;
 
-        public ContactController(IContactService contactService)
+        public ContactController(IContactService contactService, IDateTimeProvider dateTimeProvider)
         {
             _contactService = contactService;
+            _dateTimeProvider = dateTimeProvider;
         }
 
-
-        ////lista kontaktów
-        //static Dictionary<int,Contact> _contacts = new Dictionary<int,Contact>();
-        //static int id = 1;
         public IActionResult Index()
         {
             return View(_contactService.FindAll());

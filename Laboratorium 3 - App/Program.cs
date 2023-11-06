@@ -11,6 +11,7 @@ namespace Laboratorium_3___App
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<IContactService, MemoryContactService>();
+            builder.Services.AddSingleton<IDateTimeProvider, CurrentDateTimeProvider>();
 
             var app = builder.Build();
 
@@ -31,7 +32,7 @@ namespace Laboratorium_3___App
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Reservation}/{action=Create}/{id?}");
+                pattern: "{controller=Contact}/{action=Create}/{id?}");
 
             app.Run();
         }
