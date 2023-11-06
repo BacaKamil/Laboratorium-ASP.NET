@@ -12,6 +12,8 @@ namespace Laboratorium_3___App
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<IContactService, MemoryContactService>();
             builder.Services.AddSingleton<IDateTimeProvider, CurrentDateTimeProvider>();
+            builder.Services.AddSingleton<IReservationService, MemoryReservationService>();
+
 
             var app = builder.Build();
 
@@ -32,7 +34,7 @@ namespace Laboratorium_3___App
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Contact}/{action=Create}/{id?}");
+                pattern: "{controller=Reservation}/{action=Create}/{id?}");
 
             app.Run();
         }

@@ -8,37 +8,36 @@
 <form asp-controller="Reservation" asp-action="Create" method="post">
     <div class="mb-3">
         <label asp-for="Data">Data</label>
-        <input class="form-control" asp-for="Data"/>
+        <input class="form-control" asp-for="Data" />
         <span asp-validation-for="Data" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Miasto">Miasto</label>
-        <input class="form-control" asp-for="Miasto"/>
+        <input class="form-control" asp-for="Miasto" />
         <span asp-validation-for="Miasto" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Adres">Adres</label>
-        <input class="form-control" asp-for="Adres"/>
+        <input class="form-control" asp-for="Adres" />
         <span asp-validation-for="Adres" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Pokoj">Pokój</label>
-        <input class="form-control" asp-for="Pokoj"/>
+        <label asp-for="Pokoj">Pokoj</label>
+        <select class="form-control" asp-for="Pokoj" asp-items="@Html.GetEnumSelectList<Rooms>()"></select>
         <span asp-validation-for="Pokoj" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Wlasciciel">Właściciel</label>
-        <input class="form-control" asp-for="Wlasciciel"/>
+        <input class="form-control" asp-for="Wlasciciel" />
         <span asp-validation-for="Wlasciciel" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Cena">Cena</label>
-        <input class="form-control" asp-for="Cena"/>
+        <input class="form-control" asp-for="Cena" />
         <span asp-validation-for="Cena" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary" type="submit">Rezerwuj</button>
-        <a class="btn btn-primary" asp-controller="Reservation" style="float: right;" asp-action="Index">Lista rezerwacji</a>
+        <button class="btn btn-primary" type="submit">Zapisz</button>
+        <a class="btn btn-primary" asp-controler="Reservation" asp-action="Index">Powrót</a>
     </div>
-
 </form>
