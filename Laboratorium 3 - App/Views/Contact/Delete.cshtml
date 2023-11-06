@@ -7,6 +7,6 @@
 <form asp-action="Delete" method="post">
     <input asp-for="Id"/>
     <p>Czy na pewno usunąć?</p>
-    <button type="submit">Tak</button>
-    <a asp-controler="Contact" asp-action="Index">Nie</a>
+    <button class="btn btn-danger" type="submit">Tak</button>
+    <a class="btn btn-info" asp-controler="Contact" asp-action="Index">Nie</a>
 </form>

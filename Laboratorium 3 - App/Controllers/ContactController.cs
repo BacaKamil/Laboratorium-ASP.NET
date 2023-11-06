@@ -5,55 +5,89 @@ namespace Laboratorium_3___App.Controllers
 {
     public class ContactController : Controller
     {
-        static readonly Dictionary<int, Contact> _contacts = new Dictionary<int, Contact>();
-        static int index = 1;
+        private readonly IContactService _contactService;
+
+        public ContactController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
+
+
+        ////lista kontaktów
+        //static Dictionary<int,Contact> _contacts = new Dictionary<int,Contact>();
+        //static int id = 1;
         public IActionResult Index()
         {
-            return View(_contacts);
+            return View(_contactService.FindAll());
+            //_contacts
         }
 
         [HttpGet]
         public IActionResult Create()
         {
+
             return View();
+
         }
+
 
         [HttpPost]
         public IActionResult Create(Contact model)
         {
-            if (ModelState.IsValid) 
-            { 
-                model.Id = index++;
-                _contacts[model.Id] = model;
+            if (ModelState.IsValid)
+            {
+                // dodaj model do bazy lub kolekcji 
+                //model.ID = id++;
+                //_contacts.Add(model.ID, model);
+                //return RedirectToAction("Index");
+                _contactService.Add(model);
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult Update(int id)
+        {
+            return View(_contactService.FindById(id));
+        }
+
+        [HttpPost]
+        public IActionResult Update(Contact model)
+        {
+            if (ModelState.IsValid)
+            {
+                _contactService.Update(model);
                 return RedirectToAction("Index");
             }
             return View();
         }
 
         [HttpGet]
-        public IActionResult Update(int id) 
+        public IActionResult Delete(int id)
         {
-            return View("Update", _contacts[id]);
+            return View(_contactService.FindById(id));
         }
+
         [HttpPost]
-        public IActionResult Update(Contact model) 
+        public IActionResult Delete(Contact model)
         {
-            if (ModelState.IsValid)
-            {
-                _contacts[model.Id] = model;
-                return RedirectToAction("Index");
-            }
-            return View();
+            _contactService.Delete(model.Id);
+            return RedirectToAction("Index");
         }
+
         [HttpGet]
         public IActionResult Details(int id)
         {
-            return View(_contacts[id]);
+            return View(_contactService.FindById(id));
         }
-        [HttpGet]
-        public IActionResult Delete(int id) 
+
+        [HttpPost]
+        public IActionResult Details()
         {
-            return View(_contacts[id]);
+            return RedirectToAction("Index");
         }
+
     }
 }

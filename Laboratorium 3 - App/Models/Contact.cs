@@ -16,5 +16,7 @@ namespace Laboratorium_3___App.Models
         [Phone(ErrorMessage ="Niepoprawny numer telefonu!")]
         public string Phone { get; set;}
         public DateTime Birth { get; set; }
+        [Display(Name = "Priorytet")]
+        public Priority Priority { get; set; }
     }
 }

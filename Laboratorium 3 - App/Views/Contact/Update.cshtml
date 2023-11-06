@@ -27,6 +27,12 @@
         <span asp-validation-for="Birth" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary" type="submit">Zapisz</button>
+        <label asp-for="Priority"></label>
+        <span asp-validation-for="Priority" class="text-danger"></span>
+        <select class="form-control" asp-for="Priority" asp-items="@Html.GetEnumSelectList<Priority>()"></select>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit">Utwórz</button>
+         <a class="btn btn-primary" asp-controler="Contact" asp-action="Index">Wróć</a>
     </div>
 </form>
