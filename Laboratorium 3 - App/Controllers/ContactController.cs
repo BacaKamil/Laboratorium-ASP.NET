@@ -1,8 +1,10 @@
 ﻿using Laboratorium_3___App.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Laboratorium_3___App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
@@ -14,6 +16,7 @@ namespace Laboratorium_3___App.Controllers
             _dateTimeProvider = dateTimeProvider;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View(_contactService.FindAll());
@@ -23,9 +26,9 @@ namespace Laboratorium_3___App.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-
-            return View();
-
+            Contact model = new Contact();
+            model.Organizations = _contactService.FindAllOrganizations().Select(oe => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem() { Text = oe.Name, Value = oe.Id.ToString() }).ToList();
+            return View(model);
         }
 
 
@@ -52,11 +55,11 @@ namespace Laboratorium_3___App.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Contact model)
+        public IActionResult Update(Contact contact)
         {
             if (ModelState.IsValid)
             {
-                _contactService.Update(model);
+                _contactService.Update(contact);
                 return RedirectToAction("Index");
             }
             return View();

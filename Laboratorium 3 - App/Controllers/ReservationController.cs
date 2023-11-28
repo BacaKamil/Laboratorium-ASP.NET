@@ -1,6 +1,5 @@
 ﻿using Laboratorium_3___App.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 
 namespace Laboratorium_3___App.Controllers
 {

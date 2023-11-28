@@ -1,0 +1,14 @@
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\bin\Debug\net6.0\Data.deps.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\bin\Debug\net6.0\Data.runtimeconfig.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\bin\Debug\net6.0\Data.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\bin\Debug\net6.0\Data.pdb
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\refint\Data.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.pdb
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\ref\Data.dll

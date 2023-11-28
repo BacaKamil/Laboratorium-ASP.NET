@@ -45,9 +45,7 @@ namespace Laboratorium_1.Controllers
 
             switch(op)
             {
-                case Operators.ADD:
-                    ViewBag.result = a + b;
-                    break;
+                
             }
 
             return View();
