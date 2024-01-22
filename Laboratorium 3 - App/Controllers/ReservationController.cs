@@ -1,31 +1,46 @@
-﻿using Laboratorium_3___App.Models;
+﻿using Data.Entities;
+using Laboratorium_3___App.Models;
+using Laboratorium3___App.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Laboratorium_3___App.Controllers
 {
+    
     public class ReservationController : Controller
     {
-        //static readonly Dictionary<int, Reservation> _reservations = new Dictionary<int, Reservation>();
-        //static int index = 1;
-
         private readonly IReservationService _reservationService;
 
         public ReservationController(IReservationService reservationService)
         {
             _reservationService = reservationService;
         }
-
+        [Authorize(Roles = "ADMIN, USER")]
         public IActionResult Index()
         {
             return View(_reservationService.FindAll());
         }
-
+        [HttpGet]
+        [Authorize(Roles = "ADMIN, USER")]
         public IActionResult Create()
         {
-            return View();
+            var model = new Reservation();
+
+            model.Hotels = _reservationService.FindAllHotels()
+                .Select(he => new SelectListItem { Text = he.Name, Value = he.Id.ToString() })
+                .ToList();
+
+            model.Towns = _reservationService.FindAllTowns()
+                .Select(te => new SelectListItem { Text = te.Town, Value = te.Id.ToString() })
+                .ToList();
+
+            return View(model);
         }
 
+
         [HttpPost]
+        [Authorize(Roles = "ADMIN, USER")]
         public IActionResult Create(Reservation model)
         {
             if (ModelState.IsValid)
@@ -37,6 +52,7 @@ namespace Laboratorium_3___App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "ADMIN, USER")]
         public IActionResult Details(int id)
         {
             return View(_reservationService.FindById(id));
@@ -44,11 +60,13 @@ namespace Laboratorium_3___App.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Delete(int id)
         {
             return View(_reservationService.FindById(id));
-        }
+        } 
         [HttpPost]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Delete(Reservation model)
         {
             _reservationService.Delete(model.Id);
@@ -56,11 +74,29 @@ namespace Laboratorium_3___App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Update(int id)
         {
-            return View(_reservationService.FindById(id));
+            var model = _reservationService.FindById(id);
+
+            if (model == null)
+            {
+                return NotFound();
+            }
+
+            model.Hotels = _reservationService.FindAllHotels()
+                .Select(he => new SelectListItem { Text = he.Name, Value = he.Id.ToString() })
+                .ToList();
+
+            model.Towns = _reservationService.FindAllTowns()
+                .Select(te => new SelectListItem { Text = te.Town, Value = te.Town })
+                .ToList();
+
+            return View(model);
         }
+
         [HttpPost]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Update(Reservation model)
         {
             if (ModelState.IsValid)

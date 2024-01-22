@@ -1,4 +1,6 @@
-﻿namespace Laboratorium_3___App.Models
+﻿using Data.Entities;
+
+namespace Laboratorium_3___App.Models
 {
     public class MemoryReservationService : IReservationService
     {
@@ -6,7 +8,7 @@
         private Dictionary<int, Reservation> _items = new Dictionary<int, Reservation>();
         public int Add(Reservation item)
         {
-            item.Created = _timeProvider.GetDateTime();
+           // item.Created = _timeProvider.GetDateTime();
             int id = _items.Keys.Count != 0 ? _items.Keys.Max() : 0;
             item.Id = id + 1;
             _items.Add(item.Id, item);
@@ -31,6 +33,21 @@
         public void Update(Reservation item)
         {
             _items[item.Id] = item;
+        }
+
+        List<HotelEntity> IReservationService.FindAllHotels()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<TownEntity> FindAllTowns()
+        {
+            throw new NotImplementedException();
+        }
+
+        public HotelEntity? FindHotelById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public MemoryReservationService(IDateTimeProvider timeProvider)

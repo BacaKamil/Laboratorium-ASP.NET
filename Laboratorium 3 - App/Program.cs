@@ -1,7 +1,8 @@
-    using Data;
+using Data;
 using Laboratorium_3___App.Models;
-using Microsoft.AspNetCore.Identity;
+using Laboratorium3___App.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using System.Xml.Linq;
 
 namespace Laboratorium_3___App
@@ -11,28 +12,24 @@ namespace Laboratorium_3___App
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("AppDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AppDbContextConnection' not found.");
-
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
-           // builder.Services.AddSingleton<IContactService, MemoryContactService>();
-            builder.Services.AddSingleton<IDateTimeProvider, CurrentDateTimeProvider>();
-            builder.Services.AddSingleton<IReservationService, MemoryReservationService>();
-         
-
-
-            builder.Services.AddDbContext<Data.AppDbContext>();
-
-                        builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<AppDbContext>();
-            builder.Services.AddTransient<IContactService, EFContactService>();
-
-            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>();
             builder.Services.AddRazorPages();
+            builder.Services.AddControllersWithViews();
+
+            builder.Services.AddTransient<IContactService, EFContactService>();
+            builder.Services.AddTransient<IReservationService, EFReservationService>();
+
+            builder.Services.AddDbContext<AppDbContext>();
+
+            builder.Services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+
+            builder.Services.AddSingleton<IDateTimeProvider, CurrentDateTimeProvider>();
+
+
             builder.Services.AddMemoryCache();
             builder.Services.AddSession();
 
-            //builder.Services.AddDefaultIdentity<IdentityUser>(options => SignIn.ReqireConfirmedAccpunt = true).AddEntityFrameworkStores<AppDbContext>();
 
             var app = builder.Build();
 
@@ -48,16 +45,20 @@ namespace Laboratorium_3___App
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseMiddleware<LastVisitCookie>();
+
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseSession();
             app.MapRazorPages();
 
+
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Reservation}/{action=Create}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
+
         }
     }
 }

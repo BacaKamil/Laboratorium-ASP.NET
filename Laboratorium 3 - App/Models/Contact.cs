@@ -21,7 +21,7 @@ namespace Laboratorium_3___App.Models
         [Display(Name = "Priorytet")]
         public Priority Priority { get; set; }
         [HiddenInput]
-        public DateTime Created { get; set; }  //dokończ
+        //public DateTime Created { get; set; }  //dokończ
 
         public int? OrganizationId { get; set; }
         [ValidateNever]

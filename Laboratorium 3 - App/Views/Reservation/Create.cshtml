@@ -4,17 +4,20 @@
 *@
 @{
 }
-<h1>Rezerwacja</h1>
+<h1>Dodaj rezerwacje</h1>
 <form asp-controller="Reservation" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="HotelId">Hotel</label>
+        <select class="form-control" asp-for="HotelId" asp-items="@Model.Hotels"></select>
+    </div>
     <div class="mb-3">
         <label asp-for="Data">Data</label>
         <input class="form-control" asp-for="Data" />
         <span asp-validation-for="Data" class="text-danger"></span>
     </div>
     <div class="mb-3">
-        <label asp-for="Miasto">Miasto</label>
-        <input class="form-control" asp-for="Miasto" />
-        <span asp-validation-for="Miasto" class="text-danger"></span>
+        <label asp-for="TownId">Miasto</label>
+        <select class="form-control" asp-for="TownId" asp-items="@Model.Towns"></select>
     </div>
     <div class="mb-3">
         <label asp-for="Adres">Adres</label>

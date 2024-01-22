@@ -601,3 +601,18 @@ D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\De
 D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.pdb
 D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.genruntimeconfig.cache
 D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\ref\Laboratorium 3 - App.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\obj\Debug\net6.0\Laboratorium 3 - App.sourcelink.json
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\EntityFramework.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\System.CodeDom.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Laboratorium 3 - App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

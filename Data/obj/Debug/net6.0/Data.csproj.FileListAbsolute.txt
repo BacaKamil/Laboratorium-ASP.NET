@@ -12,3 +12,4 @@ D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\refin
 D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.pdb
 D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
 D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\ref\Data.dll
+D:\Microsoft Visual Studio 2022\Laboratorium ASP.NET\Data\obj\Debug\net6.0\Data.sourcelink.json

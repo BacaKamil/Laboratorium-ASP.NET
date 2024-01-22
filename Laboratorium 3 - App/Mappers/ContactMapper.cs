@@ -14,7 +14,7 @@ namespace Laboratorium_3___App.Mappers
                 Email = entity.Email,
                 Phone = entity.Phone,
                 Birth = entity.Birth,
-                OrganizationId = entity.OrgznizationId,
+                OrganizationId = entity.OrganizationId,
                 Priority = (Priority)(int)entity.Priority,
             };
         }
@@ -28,7 +28,7 @@ namespace Laboratorium_3___App.Mappers
                 Email = model.Email,
                 Phone = model.Phone,
                 Birth = model.Birth,
-                OrgznizationId = model.OrganizationId,
+                OrganizationId = model.OrganizationId,
                 Priority = (int)(Priority)model.Priority,
             };
         }

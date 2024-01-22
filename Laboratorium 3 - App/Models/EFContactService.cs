@@ -1,9 +1,10 @@
 ﻿using Data;
 using Data.Entities;
-
 using Laboratorium_3___App.Mappers;
+using Laboratorium_3___App.Models;
 
-namespace Laboratorium_3___App.Models
+
+namespace Laboratorium3___App.Models
 {
     public class EFContactService : IContactService
     {
@@ -12,8 +13,6 @@ namespace Laboratorium_3___App.Models
         {
             _context = context;
         }
-
-
 
         public int Add(Contact contact)
         {

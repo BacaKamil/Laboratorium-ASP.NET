@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Laboratorium 3 - App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0c2aa685ab146c3c9db61f048c4703cd0837338")]
 [assembly: System.Reflection.AssemblyProductAttribute("Laboratorium 3 - App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Laboratorium 3 - App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

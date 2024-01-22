@@ -4,23 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Laboratorium_3___App.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "ADMIN")]
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
-        private readonly IDateTimeProvider _dateTimeProvider;
+       // private readonly IDateTimeProvider _dateTimeProvider;
 
         public ContactController(IContactService contactService, IDateTimeProvider dateTimeProvider)
         {
             _contactService = contactService;
-            _dateTimeProvider = dateTimeProvider;
+           // _dateTimeProvider = dateTimeProvider;
         }
 
-        [AllowAnonymous]
         public IActionResult Index()
         {
             return View(_contactService.FindAll());
-            //_contacts
         }
 
         [HttpGet]
@@ -81,7 +79,12 @@ namespace Laboratorium_3___App.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            return View(_contactService.FindById(id));
+            var find = _contactService.FindById(id);
+            if(find != null) 
+            { 
+                return NotFound();
+            }
+            return View(find);
         }
 
         [HttpPost]

@@ -1,20 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
 
 namespace Laboratorium_3___App.Models
 {
     public class Reservation
     {
+        [HiddenInput]
         public int Id { get; set; }
+        public int? HotelId { get; set; }
+        [ValidateNever]
+        [Required(ErrorMessage = "Musisz podać hotel!")]
+        public List<SelectListItem> Hotels { get; set; }
 
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Musisz podać datę!")]
         [Display(Name = "Data")]
         public DateTime? Data { get; set; }
 
-        [Required(ErrorMessage = "Musisz wpisać miasto!")]
-        [Display(Name = "Miasto")]
-        public string Miasto { get; set; }
+        public int? TownId { get; set; }
+        [ValidateNever]
+        [Required(ErrorMessage = "Musisz podać miasto!")]
+        public List<SelectListItem> Towns { get; set; }
 
         [Required(ErrorMessage = "Musisz wpisać adres!")]
         [Display(Name = "Adres")]
@@ -31,7 +39,7 @@ namespace Laboratorium_3___App.Models
         [Required(ErrorMessage = "Musisz wpisać cenę!")]
         [Display(Name = "Cena")]
         public decimal? Cena { get; set; }
-        [HiddenInput]
-        public DateTime Created { get; set; }
+        //[HiddenInput]
+        //public DateTime Created { get; set; }
     }
 }

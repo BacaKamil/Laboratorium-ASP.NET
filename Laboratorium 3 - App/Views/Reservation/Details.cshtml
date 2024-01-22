@@ -1,15 +1,19 @@
 ﻿@model Reservation
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+    v
 *@
 @{
 }
 <h1>Szczegóły</h1>
 
+<h4>Hotel</h4>
+<p>@Model.HotelId</p>
 <h4>Data</h4>
 <p>@Model.Data</p>
 <h4>Miasto</h4>
-<p>@Model.Miasto</p>
+<p>@Model.TownId</p>
 <h4>Adres</h4>
 <p>@Model.Adres</p>
 <h4>Pokój</h4>
@@ -17,9 +21,7 @@
 <h4>Właściciel</h4>
 <p>@Model.Wlasciciel</p>
 <h4>Cena</h4>
-<p>@Model.Cena</p>
-<h4>Utworzono</h4>
-<p>@Model.Created</p>
+<p>@Model.Cena zł</p>
 
 <div class="mb-3">
     <a class="btn btn-primary" asp-controler="Contact" asp-action="Index">Wróć</a>
