@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240121173813_InitialCreate")]
+    [Migration("20240122201321_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,15 +34,13 @@ namespace Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("HotelId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("OrganizationId")
+                    b.Property<int?>("OrganizationId")
+                        .IsRequired()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Phone")
@@ -74,6 +72,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Town")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.ToTable("hotels");
@@ -82,25 +83,74 @@ namespace Data.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "Uczelnia",
+                            Address = "Marii Konopnickiej 33, 30-302 Kraków",
+                            Name = "Hilton Garden Inn",
+                            Town = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Address = "Bolesława Prusa 2, 00-493 Warszawa",
+                            Name = "Sheraton Grand",
+                            Town = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Address = "Żywiecka 93, 43-300 Bielsko-Biała",
+                            Name = "Ibis Styles",
+                            Town = 4
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Address = "Świętej Marii Magdaleny 2, 50-103 Wrocław",
+                            Name = "Qubus",
+                            Town = 3
+                        });
+                });
+
+            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Descryption")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("organizations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Descryption = "Uczelnia",
                             Name = "WSEI"
                         },
                         new
                         {
                             Id = 2,
-                            Address = "Uczelnia",
+                            Descryption = "Uczelnia",
                             Name = "UJ"
                         },
                         new
                         {
                             Id = 3,
-                            Address = "Uczelnia",
+                            Descryption = "Uczelnia",
                             Name = "AGH"
                         },
                         new
                         {
                             Id = 4,
-                            Address = "Firma",
+                            Descryption = "Firma",
                             Name = "NOKIA"
                         });
                 });
@@ -116,18 +166,24 @@ namespace Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
+                    b.Property<decimal?>("Cena")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("Data")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Miasto")
+                    b.Property<int?>("HotelId")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Pokoj")
                         .IsRequired()
                         .HasMaxLength(12)
                         .HasColumnType("TEXT");
+
+                    b.Property<int?>("TownId")
+                        .IsRequired()
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Wlasciciel")
                         .IsRequired()
@@ -136,7 +192,83 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("HotelId");
+
+                    b.HasIndex("TownId");
+
                     b.ToTable("reservations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Adres = "ul. 3 Maja 13",
+                            Cena = 459m,
+                            Data = new DateTime(2024, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HotelId = 3,
+                            Pokoj = "Apartament",
+                            TownId = 3,
+                            Wlasciciel = "Nowak"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Adres = "ul. Pokątna 4",
+                            Cena = 180m,
+                            Data = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HotelId = 4,
+                            Pokoj = "Jednoosobowy",
+                            TownId = 2,
+                            Wlasciciel = "Pietrzak"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Adres = "ul. Widokowa 69",
+                            Cena = 200m,
+                            Data = new DateTime(2024, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HotelId = 1,
+                            Pokoj = "Dwuosobowy",
+                            TownId = 2,
+                            Wlasciciel = "Kamiński"
+                        });
+                });
+
+            modelBuilder.Entity("Data.Entities.TownEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Town")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("towns");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Town = "Kraków"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Town = "Warszawa"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Town = "Wrocław"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Town = "Bielsko-Biała"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -167,15 +299,15 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1b90aefc-1491-421b-9e64-61969d57fe2f",
-                            ConcurrencyStamp = "1b90aefc-1491-421b-9e64-61969d57fe2f",
+                            Id = "594c5680-3a48-4937-b48e-a6d949efc63c",
+                            ConcurrencyStamp = "594c5680-3a48-4937-b48e-a6d949efc63c",
                             Name = "ADMIN",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "a6192b1e-4dab-425e-bc5e-a9571e5f3535",
-                            ConcurrencyStamp = "a6192b1e-4dab-425e-bc5e-a9571e5f3535",
+                            Id = "5ea69d13-9b4a-4458-8e9e-79e3443bb6d3",
+                            ConcurrencyStamp = "5ea69d13-9b4a-4458-8e9e-79e3443bb6d3",
                             Name = "USER",
                             NormalizedName = "USER"
                         });
@@ -270,33 +402,33 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4931bf34-593f-4696-a724-7bfb45c6c551",
+                            Id = "a28a4bcf-d59d-49d3-a090-96d8d3593cb3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a2a87de2-d5ca-4750-a588-19caf3f88c92",
+                            ConcurrencyStamp = "c3657765-af72-450e-9fcb-087ab006178d",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADAM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGGNVd12ko0lsa7n8zEYI4xo+gi7/FELL3myIfygLPSLLBHYzt9dLtG776uEAnZUGg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMaGwhRYkn9EVPhof58FE2esWa4uKRs0tp4RPaH8Q4J6P6stV8YyCS0XvK4hRpR+Dw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "869c3f97-0b17-48e6-9f9f-e025b8674161",
+                            SecurityStamp = "b101e9c6-540f-4f38-8a61-4b0e498e477a",
                             TwoFactorEnabled = false,
                             UserName = "adam"
                         },
                         new
                         {
-                            Id = "41b8595f-096d-43d1-8ff5-3e6be22f0cb3",
+                            Id = "a71ec076-b74c-437d-a707-7326928b70fa",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "09bd131c-e58f-4325-b779-4072da3fb1df",
+                            ConcurrencyStamp = "2f795eda-07cb-40d4-89d4-696eab68e79b",
                             Email = "ewa@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EWA@WSEI.EDU.PL",
                             NormalizedUserName = "EWA",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIXJn+dbFuTeOK/jReLEA5yNYJpkfJn+XUBr3zg8OvMfWdyCweQ1mn4/9WJVwXcOQA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGbIdzVYJxlU1RSBm5Qmti5cD00/XghZluZeCVWrK/vElzpKVBojOr+jAIfXqnqZIw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ff4cbf1a-c0d6-427b-b0df-4e633d17749e",
+                            SecurityStamp = "43f766c4-7459-4f21-a7bc-7949f19ca931",
                             TwoFactorEnabled = false,
                             UserName = "ewa"
                         });
@@ -364,13 +496,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "4931bf34-593f-4696-a724-7bfb45c6c551",
-                            RoleId = "1b90aefc-1491-421b-9e64-61969d57fe2f"
+                            UserId = "a28a4bcf-d59d-49d3-a090-96d8d3593cb3",
+                            RoleId = "594c5680-3a48-4937-b48e-a6d949efc63c"
                         },
                         new
                         {
-                            UserId = "41b8595f-096d-43d1-8ff5-3e6be22f0cb3",
-                            RoleId = "a6192b1e-4dab-425e-bc5e-a9571e5f3535"
+                            UserId = "a71ec076-b74c-437d-a707-7326928b70fa",
+                            RoleId = "5ea69d13-9b4a-4458-8e9e-79e3443bb6d3"
                         });
                 });
 
@@ -395,13 +527,32 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Data.Entities.ContactEntity", b =>
                 {
-                    b.HasOne("Data.Entities.HotelEntity", "Organization")
+                    b.HasOne("Data.Entities.OrganizationEntity", "Organization")
                         .WithMany("Contacts")
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Organization");
+                });
+
+            modelBuilder.Entity("Data.Entities.ReservationEntity", b =>
+                {
+                    b.HasOne("Data.Entities.HotelEntity", "Hotel")
+                        .WithMany("Reservations")
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Data.Entities.TownEntity", "Town")
+                        .WithMany("Reservations")
+                        .HasForeignKey("TownId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
+
+                    b.Navigation("Town");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -457,7 +608,17 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Data.Entities.HotelEntity", b =>
                 {
+                    b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("Data.Entities.OrganizationEntity", b =>
+                {
                     b.Navigation("Contacts");
+                });
+
+            modelBuilder.Entity("Data.Entities.TownEntity", b =>
+                {
+                    b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618
         }

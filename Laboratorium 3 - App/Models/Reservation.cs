@@ -39,6 +39,11 @@ namespace Laboratorium_3___App.Models
         [Required(ErrorMessage = "Musisz wpisać cenę!")]
         [Display(Name = "Cena")]
         public decimal? Cena { get; set; }
+
+        [ValidateNever]
+        public string HotelName { get; set; }
+        [ValidateNever]
+        public string TownName { get; set; }
         //[HiddenInput]
         //public DateTime Created { get; set; }
     }

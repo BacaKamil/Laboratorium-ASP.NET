@@ -180,6 +180,7 @@ namespace Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("TownId")
+                        .IsRequired()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Wlasciciel")
@@ -194,6 +195,41 @@ namespace Data.Migrations
                     b.HasIndex("TownId");
 
                     b.ToTable("reservations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Adres = "ul. 3 Maja 13",
+                            Cena = 459m,
+                            Data = new DateTime(2024, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HotelId = 3,
+                            Pokoj = "Apartament",
+                            TownId = 3,
+                            Wlasciciel = "Nowak"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Adres = "ul. Pokątna 4",
+                            Cena = 180m,
+                            Data = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HotelId = 4,
+                            Pokoj = "Jednoosobowy",
+                            TownId = 2,
+                            Wlasciciel = "Pietrzak"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Adres = "ul. Widokowa 69",
+                            Cena = 200m,
+                            Data = new DateTime(2024, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HotelId = 1,
+                            Pokoj = "Dwuosobowy",
+                            TownId = 2,
+                            Wlasciciel = "Kamiński"
+                        });
                 });
 
             modelBuilder.Entity("Data.Entities.TownEntity", b =>
@@ -261,15 +297,15 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "717e752f-babb-40ca-b8a9-e3ad3f8f8422",
-                            ConcurrencyStamp = "717e752f-babb-40ca-b8a9-e3ad3f8f8422",
+                            Id = "594c5680-3a48-4937-b48e-a6d949efc63c",
+                            ConcurrencyStamp = "594c5680-3a48-4937-b48e-a6d949efc63c",
                             Name = "ADMIN",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "f7003e02-35f6-4960-b429-70adbf46a282",
-                            ConcurrencyStamp = "f7003e02-35f6-4960-b429-70adbf46a282",
+                            Id = "5ea69d13-9b4a-4458-8e9e-79e3443bb6d3",
+                            ConcurrencyStamp = "5ea69d13-9b4a-4458-8e9e-79e3443bb6d3",
                             Name = "USER",
                             NormalizedName = "USER"
                         });
@@ -364,33 +400,33 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "46441f30-3ab9-4060-9047-8217ec8c61e2",
+                            Id = "a28a4bcf-d59d-49d3-a090-96d8d3593cb3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e2a3599a-b9be-43d3-9a20-c5a902973e70",
+                            ConcurrencyStamp = "c3657765-af72-450e-9fcb-087ab006178d",
                             Email = "adam@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADAM@WSEI.EDU.PL",
                             NormalizedUserName = "ADAM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJK13gTYwUXQ6/os9O3HbDYn6G0+WBJGzdvFnaa2MelNVdVxxnHfuiAUBx2VBRLwFg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMaGwhRYkn9EVPhof58FE2esWa4uKRs0tp4RPaH8Q4J6P6stV8YyCS0XvK4hRpR+Dw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0149a90b-7e5a-43d8-9dde-1d304fbd4860",
+                            SecurityStamp = "b101e9c6-540f-4f38-8a61-4b0e498e477a",
                             TwoFactorEnabled = false,
                             UserName = "adam"
                         },
                         new
                         {
-                            Id = "fe841a40-3919-463f-b0d4-15ad18a37b6e",
+                            Id = "a71ec076-b74c-437d-a707-7326928b70fa",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "92136670-0ae3-407b-bd7d-6fb9982ccc30",
+                            ConcurrencyStamp = "2f795eda-07cb-40d4-89d4-696eab68e79b",
                             Email = "ewa@wsei.edu.pl",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "EWA@WSEI.EDU.PL",
                             NormalizedUserName = "EWA",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGJzIt70ISO9zEA1X5/8KrWayEDn3H0UKaIpuZHgjUZwT43Ui3tiprwVwmjkyz7g3w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGbIdzVYJxlU1RSBm5Qmti5cD00/XghZluZeCVWrK/vElzpKVBojOr+jAIfXqnqZIw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "04cbeccb-f6e0-4740-bc45-a1413a8441eb",
+                            SecurityStamp = "43f766c4-7459-4f21-a7bc-7949f19ca931",
                             TwoFactorEnabled = false,
                             UserName = "ewa"
                         });
@@ -458,13 +494,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "46441f30-3ab9-4060-9047-8217ec8c61e2",
-                            RoleId = "717e752f-babb-40ca-b8a9-e3ad3f8f8422"
+                            UserId = "a28a4bcf-d59d-49d3-a090-96d8d3593cb3",
+                            RoleId = "594c5680-3a48-4937-b48e-a6d949efc63c"
                         },
                         new
                         {
-                            UserId = "fe841a40-3919-463f-b0d4-15ad18a37b6e",
-                            RoleId = "f7003e02-35f6-4960-b429-70adbf46a282"
+                            UserId = "a71ec076-b74c-437d-a707-7326928b70fa",
+                            RoleId = "5ea69d13-9b4a-4458-8e9e-79e3443bb6d3"
                         });
                 });
 
@@ -508,7 +544,9 @@ namespace Data.Migrations
 
                     b.HasOne("Data.Entities.TownEntity", "Town")
                         .WithMany("Reservations")
-                        .HasForeignKey("TownId");
+                        .HasForeignKey("TownId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Hotel");
 

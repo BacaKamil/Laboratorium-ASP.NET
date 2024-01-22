@@ -29,10 +29,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Books</a>
                         </li> *@
                         <li class="nav-item-header">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Index">Rezerwacje</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Index">Rezerwację</a>
                         </li>
                         <li class="nav-item-header">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Create">Dodaj rezerwacje</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Create">Dodaj rezerwację</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -63,18 +63,39 @@
     }
 
     .nav-item-header {
-        border: 2px solid blue;
-        border-radius: 20px;
+        border: 2px solid rgb(28,140,252);
+        border-radius: 8px;
         margin-right: 5px;
+    }
+
+    .nav-item-header :hover{
+            background-color: rgb(28,140,252);
+            transition: 300ms;
+            color: white;   
     }
 
     .nav-item-login {
         border: 2px solid red;
-        border-radius: 20px;
+        border-radius: 8px;
         margin-right: 5px;
+    }
+
+    .nav-item-login :hover{
+        background-color: red;
+            transition: 300ms;
+            color: white;
+        }
+
+    .nav-link :hover{
+        color: white;
     }
 
     .container-footer{
         text-align: center;
+    }
+
+    .navbar-brand{
+        font-size: 30px;
+        font-weight: bold;
     }
 </style>

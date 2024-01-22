@@ -1,4 +1,5 @@
-﻿using Data.Entities;
+﻿using Data;
+using Data.Entities;
 using Laboratorium_3___App.Models;
 using Laboratorium3___App.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -11,10 +12,12 @@ namespace Laboratorium_3___App.Controllers
     public class ReservationController : Controller
     {
         private readonly IReservationService _reservationService;
+        private readonly AppDbContext _context;
 
-        public ReservationController(IReservationService reservationService)
+        public ReservationController(IReservationService reservationService, AppDbContext context)
         {
             _reservationService = reservationService;
+            _context = context;
         }
         [Authorize(Roles = "ADMIN, USER")]
         public IActionResult Index()
@@ -55,7 +58,20 @@ namespace Laboratorium_3___App.Controllers
         [Authorize(Roles = "ADMIN, USER")]
         public IActionResult Details(int id)
         {
-            return View(_reservationService.FindById(id));
+            var reservation = _reservationService.FindById(id);
+
+            if (reservation == null)
+            {
+                return NotFound();
+            }
+
+            var hotel = _context.Hotels.FirstOrDefault(h => h.Id == reservation.HotelId);
+            var town = _context.Towns.FirstOrDefault(t => t.Id == reservation.TownId);
+
+            reservation.HotelName = hotel?.Name;
+            reservation.TownName = town?.Town;
+
+            return View(reservation);
         }
 
 

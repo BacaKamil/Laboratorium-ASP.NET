@@ -27,6 +27,44 @@ namespace Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ReservationEntity>().HasData(
+            new ReservationEntity()
+            {
+                Id = 1,
+                HotelId = 3,
+                Data = new DateTime(2024, 01, 31),
+                TownId = 3,
+                Adres = "ul. 3 Maja 13",
+                Pokoj = "Apartament",
+                Wlasciciel = "Nowak",
+                Cena = 459,
+            },
+            new ReservationEntity()
+            {
+                Id = 2,
+                HotelId = 4,
+                Data = new DateTime(2024, 02, 02),
+                TownId = 2,
+                Adres = "ul. Pokątna 4",
+                Pokoj = "Jednoosobowy",
+                Wlasciciel = "Pietrzak",
+                Cena = 180,
+            },
+            new ReservationEntity()
+            {
+                Id = 3,
+                HotelId = 1,
+                Data = new DateTime(2024, 02, 15),
+                TownId = 2,
+                Adres = "ul. Widokowa 69",
+                Pokoj = "Dwuosobowy",
+                Wlasciciel = "Kamiński",
+                Cena = 200,
+            }
+            );
+
+
+
             base.OnModelCreating(modelBuilder);
 
             string ADMIN_ID = Guid.NewGuid().ToString();
@@ -110,21 +148,21 @@ namespace Data
                 Id = 2,
                 Name = "Sheraton Grand",
                 Address = "Bolesława Prusa 2, 00-493 Warszawa",
-                Town= 2
+                Town = 2
             },
             new HotelEntity()
             {
                 Id = 3,
                 Name = "Ibis Styles",
                 Address = "Żywiecka 93, 43-300 Bielsko-Biała",
-                Town= 4,
+                Town = 4,
             },
             new HotelEntity()
             {
                 Id = 4,
                 Name = "Qubus",
                 Address = "Świętej Marii Magdaleny 2, 50-103 Wrocław",
-                Town= 3,
+                Town = 3,
             }
             );
 
@@ -196,11 +234,10 @@ namespace Data
                 Town = "Bielsko-Biała",
             }
             );
-
-            //modelBuilder.Entity<HotelEntity>()
-            //    .HasOne(c => c.Town)
-            //    .WithOne(o => o.Hotels.Town)
-            //    .HasForeignKey(c => c.TownId);
+            modelBuilder.Entity<ReservationEntity>()
+                .HasOne(r => r.Town)
+                .WithMany(t => t.Reservations)
+                .HasForeignKey(r => r.TownId);
 
         }
     }
